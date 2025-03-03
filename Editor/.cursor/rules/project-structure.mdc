@@ -1,0 +1,10 @@
+---
+description: Project structure
+globs: 
+alwaysApply: false
+---
+Code goes in Assets/[package name], either under Editor or Runtime. THere are also subfolders for systems and components. This takes the place of /src.
+
+/bin should be at the project root as a sibling to Assets/
+
+config.json should exist at Assets/config.json

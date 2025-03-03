@@ -1,0 +1,11 @@
+{
+    "name": "Gauntletrunner2025.Workflow.Tests",
+    "references": [
+        "Gauntletrunner2025.Workflow"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

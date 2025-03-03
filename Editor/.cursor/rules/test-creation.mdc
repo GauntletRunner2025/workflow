@@ -1,0 +1,15 @@
+---
+description: When creating or modifying tests
+globs: **/Tests/Editor/*.cs,**/Tests/Runtime/*.cs
+alwaysApply: false
+---
+**Testing Rules**
+
+- Do not create new worlds in tests. Use World.DefaultGameObjectInjectionWorld
+- Do not create or instantiate new Systems. All the logic should already be there
+- Edit mode tests should just call into a public static function of an existing system.
+- Follow [ExampleEditorTest.cs](mdc:ecs.windsurfrules/examples~/ExampleEditorTest.cs) to ensure proper testing conventions.
+- Test files should be independant .cs classes, do not inherit from anything.
+- Tests belong in either Tests/Runtime or Tests/Editor.
+- Tests are already segregated into their own assembly so no fancy namespace stuff is needed.
+- To interact with the ECS, use `World.DefaultGameObjectInjectionWorld.EntityManager` or whatever.

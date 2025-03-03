@@ -1,0 +1,22 @@
+{
+    "name": "Gauntletrunner2025.Workflow.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Gauntletrunner2025.Workflow",
+        "Unity.Entities",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

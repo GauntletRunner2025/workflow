@@ -1,0 +1,14 @@
+{
+    "name": "Gauntletrunner2025.Workflow.Editor.Tests",
+    "references": [
+        "Gauntletrunner2025.Workflow.Editor",
+        "Gauntletrunner2025.Workflow"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

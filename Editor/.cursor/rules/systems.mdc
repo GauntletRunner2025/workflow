@@ -1,0 +1,26 @@
+---
+description: When creating or modifying an ECS System
+globs: **/systems/*.cs
+alwaysApply: false
+---
+**Systems Rules**
+
+- Only one System may go in a file, except for Systems that contain "private" Component definitions.
+- Systems can define "private" Components if they are the only System that needs them (e.g., a unique "Processed" Component for each System).
+- Prefer single responsibility when possible.
+- Use the [ExampleSystem.cs](mdc:ecs.windsurfrules/examples~/ExampleSystem.cs) as a guide.
+- Prefer "early out" patterns to save on nesting.
+- `QueryBuilder` should only be used once, during `OnCreate()`, to get an `EntityQuery` object for later use.
+- During `OnUpdate()`, iterate over entities as shown in [ExampleSystem.cs](mdc:ecs.windsurfrules/examples~/ExampleSystem.cs)
+- Systems should not have fields or members stored on them, except in rare cases.
+- Naming: Do not append `System` to the type name.
+- Implement safety measures, throw exceptions when necessary, and use `Debug.Log()`, `Debug.LogWarning()`, and `Debug.LogError()`.
+- Most Systems will need:
+  - `using Unity.Collections;`
+  - `using UnityEngine;`
+  - `using Unity.Entities;`
+- If a System depends on a singleton to run, use `RequireForUpdate<SomeComponent>()` in `OnCreate()`.
+- `HasSingleton` is outdated; use `SystemAPI.HasSingleton<>()` (for struct Components) or `SystemAPI.ManagedAPI.HasSingleton<>()` (for class Components).
+- `OnCreate()` runs early, so prefer `OnStartRunning()`. For example, finding gameobjects by name or a certain Monobehaviour might not be ready.
+- Systems must inherit from `SystemBase` unless a custom base class is created.
+- Use `continue` inside `OnUpdate()` to skip iterations. `return` will break out of the loop completely, if thats desired, for example to only process one entity per Update.

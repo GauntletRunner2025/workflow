@@ -1,0 +1,7 @@
+---
+description: When writing new code
+globs: **/systems/*.cs
+alwaysApply: false
+---
+- Remember to implement safety, throw exceptions when necessary, and use `Debug.Log()`, `Debug.LogWarning()`, and `Debug.LogError()`.
+- After implementing any new code, be sure to run the tests powershell script [run_tests.ps1](mdc:run_tests.ps1) It is free to run and only takes a few seconds, so do it frequently. Like at the end of every agent thought process, after writing the TLDR of what you did.

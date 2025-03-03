@@ -1,0 +1,23 @@
+---
+description: General project guide
+globs: 
+alwaysApply: false
+---
+**General Project Rules**
+- Always provide a TL;DR summarizing:
+  1) What was done.
+  2) What should happen next.
+  3) What the user needs to do.
+  
+- This is a Unity ECS project using the Entities-Component-System pattern.
+- You are not allowed to modify package lists, `.csproj` files, or other configuration files. If there's a reference issue, notify the maintainer.
+- Source code should be in `Assets/` and Systems belong in the `systems` folder and components in the `components` folder.
+- Follow `examples~/ExampleSystem.cs` and `examples~/ExampleTest.cs` for proper structure and best practices.
+- No generics.
+- Prefer to let null reference exceptions happen rather than checking for `null` everywhere.
+
+
+
+
+
+

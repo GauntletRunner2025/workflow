@@ -1,0 +1,9 @@
+---
+description: Running powershell or cmd commands
+globs: 
+alwaysApply: false
+---
+- We are using Windows 11, so terminal commands should be PowerShell; avoid chaining commands with `&&`.
+- You are not allowed to modify package lists, `.csproj` files, or other configuration files. If there's a reference issue, notify the maintainer.
+- If you want to kill a process, get user consent first
+

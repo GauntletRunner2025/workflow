@@ -1,0 +1,21 @@
+---
+description: When creating or modifying an ECS Component
+globs: **/components/*.cs
+alwaysApply: false
+---
+**Components Rules**
+
+- Each Component must be in its own file with a matching name.
+- Create as many Components as needed.
+- Components should have a single field named `Value` whenever possible.
+- State is conveyed by presence/absence of a Component rather than boolean fields.
+- Use tag Components for true/false states.
+- Components should have fields, not properties.
+- Do not include logic or functions in Components; logic belongs in Systems.
+- Naming: Do not append `Component` to the type name.
+- Components must extend from `IComponentData`.
+- Class Components should be used for string fields.
+- Tasks (`Task<>`) must be on a class Component, not a struct Component.
+- When deserializing JSON, use `[JsonValue]` to map JSON fields to `Value`.
+- JSON handling uses `Newtonsoft.Json`.
+- String Components should be class-based and use regular `string` fields, not `FixedString64` or similar.
