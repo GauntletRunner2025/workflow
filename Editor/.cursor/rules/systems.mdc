@@ -1,4 +1,9 @@
 ---
+description: 
+globs: 
+alwaysApply: false
+---
+---
 description: When creating or modifying an ECS System
 globs: **/systems/*.cs
 alwaysApply: false
@@ -24,3 +29,5 @@ alwaysApply: false
 - `OnCreate()` runs early, so prefer `OnStartRunning()`. For example, finding gameobjects by name or a certain Monobehaviour might not be ready.
 - Systems must inherit from `SystemBase` unless a custom base class is created.
 - Use `continue` inside `OnUpdate()` to skip iterations. `return` will break out of the loop completely, if thats desired, for example to only process one entity per Update.
+- When setting up the EntityComponentBuffer (ecb) the using statement doesn't need a separate code block braces, it can just:
+  using var ecb = new EntityCommandBuffer(Allocator.TempJob);
